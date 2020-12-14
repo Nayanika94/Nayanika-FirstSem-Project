@@ -12,6 +12,7 @@ function validForm() {
   let contact = document.forms["myform"]["field3"].value;
   let fromlocation = document.forms["myform"]["field4"].value;
   let tolocation = document.forms["myform"]["field5"].value;
+  let address = document.forms["myform"]["field7"].value;
   let dropdown = document.getElementById("dropdown");
   let ddlText = dropdown.options[dropdown.selectedIndex].value;
 
@@ -44,6 +45,11 @@ function validForm() {
 
   else if (tolocation == "") {
     alert("Please enter the 'To' location!");
+    return false;
+  }
+  
+  else if (address == "") {
+    alert("Please enter the address!");
     return false;
   }
 
